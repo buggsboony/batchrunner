@@ -1,0 +1,50 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+       
+            {
+            "type" : "shell" ,
+            "label" : "fpc console" ,
+            "command" :"C:\\lazarus\\fpc\\3.2.0\\bin\\i386-win32\\fpc.exe" ,
+            "args" : [         
+            "${file}"
+            // ,"-FuC:\\windows\\lazarus\\fpc\\3.2.0\\units\\x86_64-win64\\rtl-objpas\\"
+            // ,"-FuC:\\windows\\lazarus\\fpc\\3.2.0\\units\\x86_64-win64\\rtl-extra\\"
+            // ,"-FuC:\\windows\\lazarus\\fpc\\3.2.0\\units\\x86_64-win64\\fcl-image\\"
+            // ,"-FuC:\\windows\\lazarus\\fpc\\3.2.0\\units\\x86_64-win64\\fcl-base\\"
+            // ,"-FuC:\\Users\\programs FPC\\3.0.4\\units\\x86_64-win64\\fcl-process\\"
+           // ,"-FuC:\\Users\\W596554\\programs\\FPC\\3.0.4\\units\\x86_64-win64\\fcl-web\\" //pour utiliser fphttpclient
+            ],
+            "options" : {
+            /*
+            "cwd" : "C:\\Users\\W596554\\programs\\FPC\\3.0.4\\bin\\i386-win32"
+            */
+            },
+            "group" : "build" ,
+            "problemMatcher": []
+        },
+        {
+            "type": "shell",
+            "label": "fpc win",  //Attention, this might not work withing the vscode terminal... May paste command to CMD.exe
+            "command": "C:\\lazarus\\fpc\\3.2.0\\bin\\i386-win32\\fpc.exe",
+            "args": [
+                 "-WG" //pour application Gui Windows, sans fenêtre console  "FPC Windows"    Specify graphic type application (Windows)
+                ,"${file}"
+                // ,"-FuC:\\windows\\lazarus\\fpc\\3.2.0\\units\\x86_64-win64\\rtl-objpas\\"
+                // ,"-FuC:\\windows\\lazarus\\fpc\\3.2.0\\units\\x86_64-win64\\rtl-extra\\"
+                // ,"-FuC:\\windows\\lazarus\\fpc\\3.2.0\\units\\x86_64-win64\\fcl-image\\"
+                // ,"-FuC:\\windows\\lazarus\\fpc\\3.2.0\\units\\x86_64-win64\\fcl-base\\"
+                // ,"-FuC:\\Users\\programs FPC\\3.0.4\\units\\x86_64-win64\\fcl-process\\"
+               // ,"-FuC:\\Users\\W596554\\programs\\FPC\\3.0.4\\units\\x86_64-win64\\fcl-web\\" //pour utiliser fphttpclient
+            ],
+            "options": {
+                "cwd": "D:\\programs\\FPC\\3.0.4\\bin\\i386-win32"
+            },
+            "group": "build",
+            "problemMatcher": []
+        }
+              
+    ]
+}
